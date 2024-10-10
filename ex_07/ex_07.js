@@ -1,4 +1,3 @@
-// First canvas - Three shapes
 const stage1 = new Konva.Stage({
     container: 'art1',
     width: 200,
@@ -8,7 +7,6 @@ const stage1 = new Konva.Stage({
   const layer1 = new Konva.Layer();
   stage1.add(layer1);
   
-  // Adding shapes with adjusted positions
   const circle1 = new Konva.Circle({
     x: 60,
     y: 60,
@@ -35,7 +33,6 @@ const stage1 = new Konva.Stage({
   layer1.add(circle1, rect1, hexagon1);
   layer1.draw();
   
-  // Second canvas - Two shapes and animation
   const stage2 = new Konva.Stage({
     container: 'art2',
     width: 200,
@@ -63,7 +60,6 @@ const stage1 = new Konva.Stage({
   layer2.add(rect2, circle2);
   layer2.draw();
   
-  // Animation for second canvas
   let velocityX = 2;
   function animate() {
     let posX = rect2.x() + velocityX;
@@ -74,8 +70,7 @@ const stage1 = new Konva.Stage({
     layer2.draw();
   }
   animate();
-  
-  // Third canvas - Single shape and event
+
   const stage3 = new Konva.Stage({
     container: 'art3',
     width: 200,
@@ -93,9 +88,8 @@ const stage1 = new Konva.Stage({
     fill: '#FAF0CA',
   });
   
-  // Adding event listener
   hexagon3.on('click', () => {
-    hexagon3.fill('#F95738'); // Change color on click
+    hexagon3.fill('#F95738');
     layer3.draw();
   });
   
